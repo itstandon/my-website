@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Arushi Tandon | About Me</title>
+<!-- Place this in your <head> section -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-6w50cq7dK3c9zVDT1lB61F0NpdBMuBLkTw1h+Ix7HgFLzHXebI1R+3DWJ1AF8oEtOIxVsb7o0E9TfLdC4noB4g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="styles.css" />
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<script>
+// Immediately add the dark-mode class if stored theme is dark
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add("dark-mode");
+}
+</script>
+</head>
+<body>
+<header>
+<h1 class="typing-heading">Arushi Tandon</h1>
+<button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
+<nav>
+<ul>
+<li><a href="index.html">About Me</a></li>
+<li><a href="education.html">Education & Achievements</a></li>
+<li><a href="skills.html">Technical Skills</a></li>
+<li><a href="files/Arushi_Tandon_CV.pdf" target="_blank">Download CV</a></li>
+</ul>
+</nav>
+</header>
+<main>
+<section id="about">
+<div class="about-box">
+<h2>About Me</h2>
+<div class="about-container">
+<img src="images/profile.jpg" alt="Profile Picture" class="profile-pic" />
+<p>
+ Hello! I am Arushi Tandon, a fresher at IIIT-Hyderabad. I am an amateur web developer born in Delhi and currently residing in Bangalore.
+ I have always been fascinated with science, technology and innovation. In my leisure time, I enjoy reading, baking, and doodling.
+</p>
+</div>
+</div>
+<div class="hometown-box">
+<h2>My Hometowns</h2>
+<div class="local-images">
+<div class="image-container">
+<img src="images/birthplace1.jpg" alt="Delhi" />
+<p>Delhi</p>
+</div>
+<div class="image-container">
+<img src="images/birthplace2.jpg" alt="Bangalore" />
+<p>Bangalore</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<!-- Add this inside your <head> tag if not already included -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Footer Section -->
+    <footer>
+      <p>
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:iarushitandon@gmail.com">iarushitandon@gmail.com</a>
+        &nbsp;|&nbsp;
+        <i class="fas fa-phone"></i>
+        <a href="tel:+919818622752">+91 98186 22752</a>
+      </p>
+    </footer>
+    
+
+<script>
+// On page load, check for saved theme in localStorage
+document.addEventListener('DOMContentLoaded', function() {
+    if(localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+    }
+});
+
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    // Update localStorage based on the current state
+    if(document.body.classList.contains("dark-mode")){
+        localStorage.setItem('theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+    }
+}
+</script>
+</body>
+</html>
