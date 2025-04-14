@@ -34,7 +34,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-blend-mode: overlay;
+    /* Removed background-blend-mode to let the image show clearly */
     transition: all 0.3s ease-in-out;
 }
 
@@ -334,4 +334,3 @@ footer i {
     margin-right: 5px;
     color: #555;
 }
-
