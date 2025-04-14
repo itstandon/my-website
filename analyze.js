@@ -1,6 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
   const analyzeBtn = document.getElementById('analyzeBtn');
   const resultDiv = document.getElementById('result');
+  const resetBtn = document.getElementById('resetBtn');
+
+resetBtn.addEventListener('click', function () {
+  document.getElementById('textInput').value = '';
+  resultDiv.innerHTML = '';
+});
+
 
   analyzeBtn.addEventListener('click', function () {
     const text = document.getElementById('textInput').value;
