@@ -4,8 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arushi Tandon | Technical Skills</title>
+
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Font: Dancing Script -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    integrity="sha512-HASH-HERE" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
 </head>
 <body>
   <header>
@@ -23,72 +36,66 @@
 
   <main>
     <section id="skills">
-        <h2>Technical Skills</h2>
-        <div class="skill-box">
-          <label>C</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 90%;">Advanced</div></div>
-      
-          <label>C++</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
-      
-          <label>Python</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
-      
-          <label>JavaScript</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
-      
-          <label>HTML</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 60%;">Moderate</div></div>
-      
-          <label>CSS</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
-      
-          <label>SQL</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 85%;">Advanced</div></div>
-      
-          <label>MongoDB</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 85%;">Advanced</div></div>
-      
-          <label>Git</label>
-          <div class="skill-bar"><div class="skill-progress" style="width: 60%;">Moderate</div></div>
-        </div>
-      </section>      
+      <h2>Technical Skills</h2>
+      <div class="skill-box">
+
+        <label>C</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 90%;">Advanced</div></div>
+
+        <label>C++</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
+
+        <label>Python</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
+
+        <label>JavaScript</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
+
+        <label>HTML</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 60%;">Moderate</div></div>
+
+        <label>CSS</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 30%;">Beginner</div></div>
+
+        <label>SQL</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%;">Advanced</div></div>
+
+        <label>MongoDB</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 85%;">Advanced</div></div>
+
+        <label>Git</label>
+        <div class="skill-bar"><div class="skill-progress" style="width: 60%;">Moderate</div></div>
+
+      </div>
+    </section>      
   </main>
 
-<!-- Add this inside your <head> tag if not already included -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Footer Section -->
+  <footer>
+    <p>
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:iarushitandon@gmail.com">iarushitandon@gmail.com</a>
+      &nbsp;|&nbsp;
+      <i class="fas fa-phone"></i>
+      <a href="tel:+919818622752">+91 98186 22752</a>
+    </p>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:iarushitandon@gmail.com">iarushitandon@gmail.com</a>
-        &nbsp;|&nbsp;
-        <i class="fas fa-phone"></i>
-        <a href="tel:+919818622752">+91 98186 22752</a>
-      </p>
-    </footer>
-
-
+  <!-- Dark Mode Toggle Script -->
   <script>
-    // On page load, check for saved theme in localStorage
     (function() {
-      if(localStorage.getItem('theme') === 'dark') {
+      if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
       }
     })();
 
     function toggleMode() {
       document.body.classList.toggle("dark-mode");
-      
-      // Update localStorage based on the current state
-      if(document.body.classList.contains("dark-mode")){
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
+      localStorage.setItem('theme', document.body.classList.contains("dark-mode") ? 'dark' : 'light');
     }
   </script>
+
+  <!-- Optional Analytics or Interaction Script -->
   <script src="tracking.js"></script>
 </body>
 </html>

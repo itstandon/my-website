@@ -4,8 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Arushi Tandon | Education</title>
+  
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
+  
+  <!-- Google Font: Dancing Script -->
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    integrity="sha512-HASH-HERE" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
 </head>
 <body>
   <header>
@@ -22,75 +35,67 @@
   </header>
 
   <main>
-        <section id="education">
-            <div class="info-box timeline">
-                <h2>Education</h2>
-              
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                    <h3>National Public School, Bangalore <span class="timeline-date">2012 – 2022</span></h3>
-                    <p>Studied up to class 10.</p>
-                  </div>
-                </div>
-              
-                <div class="timeline-item">
-                  <div class="timeline-marker"></div>
-                  <div class="timeline-content">
-                    <h3>The Cambridge International School (dummy school) <span class="timeline-date">2022 – 2024</span></h3>
-                    <p>Studied in 11th and 12th grades.</p>
-                  </div>
-                </div>
-              </div>              
-    
-          <div class="info-box">
-            <h2>Achievements</h2>
-            <ul>
-              <li>Member of the Student Council and the Maths & Science committee in 10th grade.</li>
-              <li>Served as the student editor of my school magazine in 9th grade.</li>
-              <li>Achieved 98.4% in the 10th board examinations.</li>
-              <li>Achieved 96.2% in the 12th board examinations.</li>
-              <li>Secured 99.4 percentile in JEE Mains.</li>
-              <li>Megathon winner 2024 (fresher's prompt).</li>
-            </ul>
+    <section id="education">
+      <div class="info-box timeline">
+        <h2>Education</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>National Public School, Bangalore <span class="timeline-date">2012 – 2022</span></h3>
+            <p>Studied up to class 10.</p>
           </div>
-        </section>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <h3>The Cambridge International School <span class="timeline-date">2022 – 2024</span></h3>
+            <p>Studied in 11th and 12th grades.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-box">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Member of the Student Council and the Maths & Science committee in 10th grade.</li>
+          <li>Served as the student editor of my school magazine in 9th grade.</li>
+          <li>Achieved 98.4% in the 10th board examinations.</li>
+          <li>Achieved 96.2% in the 12th board examinations.</li>
+          <li>Secured 99.4 percentile in JEE Mains.</li>
+          <li>Megathon winner 2024 (OSDG fresher's prompt).</li>
+        </ul>
+      </div>
+    </section>
   </main>
 
-<!-- Add this inside your <head> tag if not already included -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Footer Section -->
+  <footer>
+    <p>
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:iarushitandon@gmail.com">iarushitandon@gmail.com</a>
+      &nbsp;|&nbsp;
+      <i class="fas fa-phone"></i>
+      <a href="tel:+919818622752">+91 98186 22752</a>
+    </p>
+  </footer>
 
-    <!-- Footer Section -->
-    <footer>
-      <p>
-        <i class="fas fa-envelope"></i>
-        <a href="mailto:iarushitandon@gmail.com">iarushitandon@gmail.com</a>
-        &nbsp;|&nbsp;
-        <i class="fas fa-phone"></i>
-        <a href="tel:+919818622752">+91 98186 22752</a>
-      </p>
-    </footer>
-
-
+  <!-- Dark Mode Toggle Script -->
   <script>
-    // On page load, check for saved theme in localStorage
     (function() {
-      if(localStorage.getItem('theme') === 'dark') {
+      if (localStorage.getItem('theme') === 'dark') {
         document.body.classList.add('dark-mode');
       }
     })();
 
     function toggleMode() {
       document.body.classList.toggle("dark-mode");
-      
-      // Update localStorage based on the current state
-      if(document.body.classList.contains("dark-mode")){
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
+      localStorage.setItem('theme', document.body.classList.contains("dark-mode") ? 'dark' : 'light');
     }
   </script>
+
+  <!-- Optional Analytics/Tracking Script -->
   <script src="tracking.js"></script>
 </body>
 </html>
