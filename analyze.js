@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function () {
   const resultDiv = document.getElementById('result');
   const resetBtn = document.getElementById('resetBtn');
 
-resetBtn.addEventListener('click', function () {
-  document.getElementById('textInput').value = '';
-  resultDiv.innerHTML = '';
-});
-
+  resetBtn.addEventListener('click', function () {
+    document.getElementById('textInput').value = '';
+    resultDiv.innerHTML = '';
+  });
 
   analyzeBtn.addEventListener('click', function () {
     const text = document.getElementById('textInput').value;
@@ -49,7 +48,13 @@ resetBtn.addEventListener('click', function () {
       return output;
     };
 
+    let warningMessage = '';
+    if (words < 10000) {
+      warningMessage = `<p style="color: red;"><strong>Warning:</strong> Word count is less than 10,000!</p>`;
+    }
+
     resultDiv.innerHTML = `
+      ${warningMessage}
       <h3>Text Analysis Results</h3>
       <p><strong>Letters:</strong> ${letters}</p>
       <p><strong>Words:</strong> ${words}</p>
